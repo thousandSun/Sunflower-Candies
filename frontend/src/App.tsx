@@ -1,19 +1,14 @@
-
 import './App.css'
+import Header from './components/Header'
+import Products from './components/Products'
+import Footer from './components/Footer'
 
 function App() {
-
   return (
     <div>
-      <header>
-        Sunflower Candies
-      </header>
-      <main>
-
-      </main>
-      <footer>
-        All Rights Reserved
-      </footer>
+      <Header title="Sunflower Sour Candies" />
+      <Products />
+      <Footer />
     </div>
   )
 }

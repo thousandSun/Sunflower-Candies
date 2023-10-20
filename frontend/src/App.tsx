@@ -1,17 +1,18 @@
-import Header from './components/Header'
-import Products from './components/Products'
-import Footer from './components/Footer'
-import { Container } from 'react-bootstrap'
+import Layout from './components/Layout'
+import Home from './components/Home'
+import ProductPage from './components/ProductPage'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="d-flex flex-column vh-100">
-      <Header title="Sunflower Sour Candies" />
-      <Container className="mt-3">
-        <Products />
-      </Container>
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="product">
+          <Route path=":slug" element={<ProductPage />} />
+        </Route>{' '}
+      </Route>{' '}
+    </Routes>
   )
 }
 

@@ -2,7 +2,7 @@ import { Row } from 'react-bootstrap'
 import { sampleProducts } from '../data'
 import ProductItem from './ProductItem'
 
-function Products() {
+function Home() {
   return (
     <Row>
       {sampleProducts.map((product) => (
@@ -12,4 +12,4 @@ function Products() {
   )
 }
 
-export default Products
+export default Home

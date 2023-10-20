@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Navbar, Nav } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 interface HeaderProps {
   title: string
@@ -10,7 +11,11 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
     <header className="header">
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand>{title}</Navbar.Brand>
+          <Navbar.Brand>
+            <Link to="/" className="bare-link home-link">
+              {title}
+            </Link>
+          </Navbar.Brand>
         </Container>
         <Nav>
           <a href="/cart" className="nav-link">
@@ -21,7 +26,6 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
           </a>
         </Nav>
       </Navbar>
-      <h1>{title}</h1>
     </header>
   )
 }

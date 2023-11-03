@@ -5,3 +5,14 @@ export const getError = (error: ApiError) => {
         ? error.response.data.message
         : error.message
 }
+
+export const isApiError = (error: Error | ApiError): error is ApiError => {
+    return (
+      error &&
+      typeof error === 'object' &&
+      'message' in error &&
+      'response' in error &&
+      'data' in error.response &&
+      'message' in error.response.data
+    );
+  }

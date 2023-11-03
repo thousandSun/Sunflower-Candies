@@ -1,21 +1,33 @@
-import React from 'react'
 import { Product } from '../types/Product'
-import { Col } from 'react-bootstrap'
+import { Button, Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import Rating from './Rating'
 
-interface ProductProps {
-  product: Product
-}
-
-const ProductItem: React.FC<ProductProps> = ({ product }) => {
+const ProductItem = ({ product }: { product: Product }) => {
   return (
-    <Col sm={6} md={4} lg={3}>
+    <Card>
       <Link to={`/product/${product.slug}`} className="bare-link">
-        <h2>{product.name}</h2>
-        <img src={product.image} alt={product.name} className="product-image" />
-        <h3>${product.price}</h3>
+        <img
+          src={product.image}
+          alt={product.name}
+          className="product-image card-img-top"
+        />
       </Link>
-    </Col>
+      <Card.Body>
+        <Link to={`/product/${product.slug}`}>
+          <Card.Title>{product.name}</Card.Title>
+        </Link>
+        <Rating rating={product.rating} numReviews={product.numReviews} />
+        <Card.Text>${product.price}</Card.Text>
+        {product.countInStock === 0 ? (
+          <Button variant="secondary" disabled>
+            Out of Stock
+          </Button>
+        ) : (
+          <Button>Add to Cart</Button>
+        )}
+      </Card.Body>
+    </Card>
   )
 }
 

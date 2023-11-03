@@ -9,7 +9,7 @@ export const sampleProducts:Product[] = [
         price: 6,
         countInStock: 10,
         brand: 'Sunflower Sour Candies',
-        rating: 5,
+        rating: 4,
         numReviews: 10,
         description: 'Sour Path Watermelons coated in our signature blend of chamoy and chili powder',
     },
@@ -33,7 +33,7 @@ export const sampleProducts:Product[] = [
         price: 6,
         countInStock: 10,
         brand: 'Sunflower Sour Candies',
-        rating: 5,
+        rating: 4.5,
         numReviews: 10,
         description: 'Skittles coated in our signature blend of chamoy and chili powder'
     },
@@ -45,7 +45,7 @@ export const sampleProducts:Product[] = [
         price: 10,
         countInStock: 10,
         brand: 'Sunflower Sour Candies',
-        rating: 5,
+        rating:3.5,
         numReviews: 10,
         description: 'Our signature blend of chamoy and chili powder in a container perfect for rimming your favorite drinks!'
     }

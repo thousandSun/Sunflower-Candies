@@ -11,7 +11,7 @@ export const sampleProducts:Product[] = [
         brand: 'Sunflower Sour Candies',
         rating: 4,
         numReviews: 10,
-        description: 'Sour Path Watermelons coated in our signature blend of chamoy and chili powder',
+        description: 'Sour Patch Watermelons coated in our signature blend of chamoy and chili powder',
     },
     {
         name: 'Sour Gushers',

@@ -5,4 +5,8 @@ const getProducts = async (req: Request, res: Response) => {
     res.json(sampleProducts)
 }
 
-export {getProducts}
+const getProduct = async (req: Request, res: Response) => {
+    res.json(sampleProducts.find((product) => product.slug === req.params.slug))
+}
+
+export {getProducts, getProduct}
